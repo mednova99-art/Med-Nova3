@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>مجلة Med Nova</title>
+</head>
+<body>
+  <!-- رأس الموقع -->
+  <!-- داخل الــ body -->
+<header class="logo-title">
+  <img src="assets/mm.png" alt="Med Nova Logo" class="logo">
+  <h1 class="title"> مجلة Med Nova </h1>
+</header>
+
+  <!-- شريط التنقل -->
+  <nav>
+    <ul>
+      <li><a href="#research">البحث العلمي</a></li>
+      <li><a href="#genetics">الأمراض الجينية</a></li>
+      <li><a href="#interview">مقابلة</a></li>
+      <li><a href="#facts">هل تعلم؟</a></li>
+      <li><a href="#quiz">الفعاليات</a></li>
+      <li><a href="#contact">تواصل</a></li>
+    </ul>
+  </nav>
+
+  <!-- غلاف -->
+  
+
+  <!-- البحث العلمي -->
+  <section id="research">
+    <h2 class="section-title">📑 البحث العلمي</h2>
+    <div class="card">
+      <img src="assets/nano.jpg" alt="Nanomedicine">
+      <div class="card-content">
+        <h3>الطب النانوي في علاج السرطان</h3>
+        <p>تكنولوجيا النانو أحدثت ثورة في الطب عبر استخدام جسيمات دقيقة تستهدف الخلايا السرطانية مباشرة.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- مقالات -->
+  <section id="highlights">
+    <h2 class="section-title">✨ مقالات مميزة</h2>
+    <div class="articles">
+      <div class="card" id="genetics">
+        <img src="assets/virus.jpg" alt="Genetics">
+        <div class="card-content">
+          <h3> التلاسيميا</h3>
+          <p>مرض وراثي يضعف إنتاج الهيموغلوبين، مما يؤدي إلى فقر دم مزمن.</p>
+        </div>
+      </div>
+
+      <div class="card" >
+        <img src="assets/book.jpg" alt="Book">
+        <div class="card-content">
+          <h3> ملخص كتاب "عقل غير هادئ"</h3>
+          <p>رحلة مع الاضطراب الوجداني ثنائي القطب تجمع بين التجربة الشخصية والمعرفة العلمية.</p>
+        </div>
+      </div>
+
+      <div class="card" >
+        <img src="assets/nabel.jpg" alt="Nobel">
+        <div class="card-content">
+          <h3>جائزة نوبل</h3>
+          <p>مُنحت جائزة نوبل عام 2024 لأبحاث mRNA التي ساهمت في تطوير اللقاحات.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- مقابلة -->
+  <section id="interview">
+    <h2 class="section-title">🎤 مقابلة</h2>
+    <div class="card">
+      <img src="assets/bdc.jpg" alt="Interview">
+      <div class="card-content">
+        <h3>حديث مع البروفيسور</h3>
+        <p>في هذه المقابلة تحدثنا مع بروفيسور في علم الوراثة حول مستقبل الأبحاث الطبية.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- هل تعلم -->
+  <section id="facts">
+    <h2 class="section-title">❓ هل تعلم؟</h2>
+    <div class="facts">
+      <div class="fact">هل تعلم أن جسم الإنسان يحتوي على حوالي 37 تريليون خلية؟</div>
+      <div class="fact">هل تعلم أن الدماغ يستهلك 20% من طاقة الجسم رغم أنه يمثل 2% فقط من وزنه؟</div>
+      <div class="fact">هل تعلم أن DNA لو فُرد يصل إلى الشمس ويعود أكثر من 600 مرة؟</div>
+    </div>
+  </section>
+  
+  <!-- الأنشطة -->
+  <section id="quiz">
+    <h2 class="section-title">الفعاليات  </h2>
+    <h3 class="section-tit"> Quiz | CROSSWORD </h3>
+  </section>
+
+  <!-- الكلمات المتقاطعة -->
+  <!-- ============ MED NOVA - CROSSWORD (FR) ============ -->
+<section id="crossword-fr" class="mn-crossword">
+  <div class="mn-wrap">
+    <h2 class="mn-title">🧩 CROSSWORD  Med Nova</h2>
+
+    <div id="mn-grid" class="mn-grid"></div>
+
+    <div class="mn-actions">
+      <button class="mn-btn" onclick="mnCheck()">تحقق من الحل ✅</button>
+      <button class="mn-btn" onclick="mnClear()">مسح الإجابات 🧽</button>
+      <button class="mn-btn mn-outline" onclick="mnReveal()">إظهار الحل 👀</button>
+    </div>
+
+    <div class="mn-clues">
+      <div>
+        <h3>ACROSS</h3>
+        <ol>
+          <li value="3">Dilatation des bronches</li>
+          <li value="4">Ablation des amygdales</li>
+          <li value="5">Inflammation des poumons</li>
+          <li value="6">Chirurgie du cœur</li>
+          <li value="8">Élimination des calculs rénaux</li>
+          <li value="10">Examen de l’estomac</li>
+          <li value="11">Ablation de l’appendice</li>
+          <li value="13">Inflammation des articulations</li>
+        </ol>
+      </div>
+      <div>
+        <h3>DOWN</h3>
+        <ol>
+          <li value="1">Ablation de la vésicule biliaire</li>
+          <li value="2">Ablation de la rate</li>
+          <li value="7">Ablation d'une tumeur</li>
+          <li value="9">Examen de la vessie</li>
+          <li value="12">Inflammation de l’intestin</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ====== BASE ====== */
+  .mn-crossword{background:#f7f7f9;border-top:1px solid #eee;border-bottom:1px solid #eee}
+  .mn-wrap{max-width:1100px;margin:auto;padding:2rem 1rem}
+  .mn-title{margin:.2rem 0 1rem;font-size:1.9rem;color:#4B0082;text-align:center}
+  .mn-note{color:#666;text-align:center;margin-bottom:1.2rem}
+
+  /* ====== GRID ====== */
+  .mn-grid{display:grid;gap:4px;justify-content:center;background:#fff;border:1px solid #e8e8e8;padding:12px;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,.05);margin-bottom:1rem}
+  .mn-cell{width:42px;height:42px;text-align:center;border:1px solid #ddd;border-radius:8px;text-transform:uppercase;font-weight:700}
+  .mn-cell[disabled]{background:#e9e9ee;border-color:#e1e1e6}
+  .mn-num{position:absolute;font-size:.7rem;color:#4B0082;transform:translate(6px,3px)}
+  .mn-cell-wrap{position:relative}
+
+  /* ====== ACTIONS & CLUES ====== */
+  .mn-actions{display:flex;gap:.6rem;flex-wrap:wrap;margin:1rem 0 1.4rem;justify-content:center}
+  .mn-btn{background:#4B0082;color:#fff;border:none;border-radius:10px;padding:.6rem 1rem;font-weight:700;cursor:pointer}
+  .mn-btn:hover{opacity:.92}
+  .mn-outline{background:#111}
+
+  .mn-clues{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;margin-top:.5rem}
+  .mn-clues h3{color:#4B0082;margin:.2rem 0}
+  .mn-clues ol{margin:.4rem 0 0;padding-inline-start:1.2rem}
+  .mn-clues li{margin:.25rem 0}
+</style>
+
+<script>
+/* =========================================================
+   MED NOVA – Crossword 
+========================================================= */
+
+(function(){
+  // حجم الشبكة
+  const ROWS = 20, COLS = 22;
+
+  // تعريف الكلمات: رقم، كلمة، صف/عمود بداية (0-index)، اتجاه (H أفقي / V عمودي)
+  const entries = [
+    // ACROSS
+    {num:3,  ans:"BRONCHECTASIE",   r:1,  c:2,  dir:"H"},
+    {num:4,  ans:"AMYGDALECTOMIE",  r:3,  c:3,  dir:"H"},
+    {num:5,  ans:"PNEUMONIE",       r:5,  c:0,  dir:"H"},
+    {num:6,  ans:"CARDIOTOMIE",     r:5,  c:11, dir:"H"},
+    {num:8,  ans:"NEPHROLITHOTOMIE",r:7,  c:2,  dir:"H"},
+    {num:10, ans:"GASTROSCOPIE",    r:9,  c:4,  dir:"H"},
+    {num:11, ans:"APPENDICECTOMIE", r:11, c:1,  dir:"H"},
+    {num:13, ans:"ARTHRITE",        r:13, c:5,  dir:"H"},
+    // DOWN
+    {num:1,  ans:"CHOLECYSTECTOMIE",r:0,  c:6,  dir:"V"}, // يمر عبر C في BRONCHECTASIE تقريباً
+    {num:2,  ans:"SPLENECTOMIE",    r:0,  c:18, dir:"V"},
+    {num:7,  ans:"TUMERECTOMIE",    r:0,  c:15, dir:"V"},
+    {num:9,  ans:"CYSTOSCOPIE",     r:0,  c:10, dir:"V"},
+    {num:12, ans:"ENTERITE",        r:0,  c:8,  dir:"V"},
+  ];
+
+  // إنشاء مصفوفة الشبكة
+  const grid = Array.from({length:ROWS}, ()=> Array(COLS).fill(null));
+
+  // وضع الكلمات داخل الشبكة (مع السماح بالتقاطعات الصحيحة)
+  for (const e of entries){
+    const L = e.ans.length;
+    for (let i=0;i<L;i++){
+      const rr = e.r + (e.dir==="V"? i:0);
+      const cc = e.c + (e.dir==="H"? i:0);
+      const ch = e.ans[i].toUpperCase();
+      if (rr>=ROWS || cc>=COLS) continue; // حماية
+      const cur = grid[rr][cc];
+      if (cur && cur !== ch){ console.warn("Conflict at", rr, cc, cur, ch); }
+      grid[rr][cc] = ch;
+    }
+  }
+
+  // رسم الشبكة
+  const holder = document.getElementById('mn-grid');
+  holder.style.gridTemplateColumns = `repeat(${COLS}, 42px)`;
+
+  // لتحديد خلايا البداية لوضع أرقام التلميحات
+  const starts = new Map(); // key "r,c" -> رقم
+  for (const e of entries){
+    const key = `${e.r},${e.c}`;
+    // في حال تشارك مكان البداية كلمتان نحتفظ بالأصغر
+    if (!starts.has(key) || e.num < starts.get(key)) starts.set(key, e.num);
+  }
+
+  for (let r=0;r<ROWS;r++){
+    for (let c=0;c<COLS;c++){
+      const wrap = document.createElement('div');
+      wrap.className = 'mn-cell-wrap';
+
+      const val = grid[r][c];
+      const input = document.createElement('input');
+      input.className = 'mn-cell';
+      input.maxLength = 1;
+
+      if (val === null){
+        input.disabled = true; // حاجز/فراغ
+      } else {
+        input.dataset.solution = val;
+        input.addEventListener('input', e=>{
+          e.target.value = (e.target.value || '').toUpperCase();
+          e.target.style.background = '';
+        });
+      }
+
+      // وضع رقم التلميح إن كانت هذه خلية بداية
+      const n = starts.get(`${r},${c}`);
+      if (n){
+        const num = document.createElement('span');
+        num.className = 'mn-num';
+        num.textContent = n;
+        wrap.appendChild(num);
+      }
+
+      wrap.appendChild(input);
+      holder.appendChild(wrap);
+    }
+  }
+
+  // دوال التحكم عالمياً
+  window.mnCheck = function(){
+    document.querySelectorAll('#mn-grid .mn-cell').forEach(inp=>{
+      if (inp.disabled) return;
+      const ok = (inp.value || '').toUpperCase() === inp.dataset.solution;
+      inp.style.background = ok ? '#c9f7d5' : '#ffd8d6';
+    });
+  };
+  window.mnClear = function(){
+    document.querySelectorAll('#mn-grid .mn-cell').forEach(inp=>{
+      if (inp.disabled) return;
+      inp.value = ''; inp.style.background = '';
+    });
+  };
+  window.mnReveal = function(){
+    document.querySelectorAll('#mn-grid .mn-cell').forEach(inp=>{
+      if (inp.disabled) return;
+      inp.value = inp.dataset.solution;
+      inp.style.background = '#e8e8ff';
+    });
+  };
+})();
+</script>
+<!-- ============ /MED NOVA - CROSSWORD ============ -->
+
+<!-- 🟣 قسم الكويز -->
+<section id="quiz" class="quiz-section">
+  <div class="quiz-container">
+    <h2 class="quiz-title">🧠 اختبار Med Nova</h2>
+    <p class="quiz-subtitle">اختبر معلوماتك الطبية بطريقة ممتعة!</p>
+    
+    <!-- ⏳ المؤقت -->
+    <div class="quiz-timer" id="quiz-timer">⏳ 60 ثانية</div>
+
+    <!-- 📊 شريط التقدم -->
+    <div class="progress-container">
+      <div class="progress-bar" id="progress-bar">0%</div>
+    </div>
+
+    <!-- 📝 الأسئلة -->
+    <div class="quiz-card active" id="q1">
+      <h3>ما هو العضو المسؤول عن ضخ الدم في جسم الإنسان؟</h3>
+      <ul>
+        <li><button onclick="nextQuestion(1,false)">الكبد</button></li>
+        <li><button onclick="nextQuestion(1,true)">القلب</button></li>
+        <li><button onclick="nextQuestion(1,false)">الرئة</button></li>
+      </ul>
+    </div>
+
+    <div class="quiz-card" id="q2">
+      <h3>أي نوع من الخلايا يحمل المعلومات الوراثية؟</h3>
+      <ul>
+        <li><button onclick="nextQuestion(2,false)">خلايا الدم</button></li>
+        <li><button onclick="nextQuestion(2,true)">الخلايا الجينية (DNA)</button></li>
+        <li><button onclick="nextQuestion(2,false)">خلايا العضلات</button></li>
+      </ul>
+    </div>
+
+    <div class="quiz-card" id="q3">
+      <h3>منح جائزة نوبل في الطب سنة 2020 عن أي مجال؟</h3>
+      <ul>
+        <li><button onclick="nextQuestion(3,true)">فيروس التهاب الكبد C</button></li>
+        <li><button onclick="nextQuestion(3,false)">اللقاحات</button></li>
+        <li><button onclick="nextQuestion(3,false)">الخلايا الجذعية</button></li>
+      </ul>
+    </div>
+
+    <div class="quiz-card" id="q4">
+      <h3>ما هو أكبر عضو في جسم الإنسان؟</h3>
+      <ul>
+        <li><button onclick="nextQuestion(4,false)">الكبد</button></li>
+        <li><button onclick="nextQuestion(4,false)">القلب</button></li>
+        <li><button onclick="nextQuestion(4,true)">الجلد</button></li>
+      </ul>
+    </div>
+
+    <div class="quiz-card" id="q5">
+      <h3>ما اسم الخلايا المسؤولة عن المناعة في الدم؟</h3>
+      <ul>
+        <li><button onclick="nextQuestion(5,true)">الكريات البيضاء</button></li>
+        <li><button onclick="nextQuestion(5,false)">الكريات الحمراء</button></li>
+        <li><button onclick="nextQuestion(5,false)">الصفائح الدموية</button></li>
+      </ul>
+    </div>
+
+    <div class="quiz-card" id="q6">
+      <h3>أين يقع البنكرياس؟</h3>
+      <ul>
+        <li><button onclick="nextQuestion(6,false)">في الرأس</button></li>
+        <li><button onclick="nextQuestion(6,true)">في البطن</button></li>
+        <li><button onclick="nextQuestion(6,false)">في الصدر</button></li>
+      </ul>
+    </div>
+
+    <div class="quiz-card" id="q7">
+      <h3>أي فيتامين يُعرف بفيتامين الشمس؟</h3>
+      <ul>
+        <li><button onclick="nextQuestion(7,false)">فيتامين C</button></li>
+        <li><button onclick="nextQuestion(7,true)">فيتامين D</button></li>
+        <li><button onclick="nextQuestion(7,false)">فيتامين B12</button></li>
+      </ul>
+    </div>
+
+    <div class="quiz-card" id="q8">
+      <h3>ما الوحدة الأساسية في الجهاز العصبي؟</h3>
+      <ul>
+        <li><button onclick="nextQuestion(8,true)">العصبون (Neuron)</button></li>
+        <li><button onclick="nextQuestion(8,false)">الخلايا الجذعية</button></li>
+        <li><button onclick="nextQuestion(8,false)">الصفائح</button></li>
+      </ul>
+    </div>
+
+    <div class="quiz-card" id="q9">
+      <h3>كم عدد الكروموسومات عند الإنسان؟</h3>
+      <ul>
+        <li><button onclick="nextQuestion(9,true)">46 كروموسوم</button></li>
+        <li><button onclick="nextQuestion(9,false)">44 كروموسوم</button></li>
+        <li><button onclick="nextQuestion(9,false)">48 كروموسوم</button></li>
+      </ul>
+    </div>
+
+    <div class="quiz-card" id="q10">
+      <h3>ما هو الغاز الذي نتنفسه للبقاء على قيد الحياة؟</h3>
+      <ul>
+        <li><button onclick="nextQuestion(10,false)">ثاني أكسيد الكربون</button></li>
+        <li><button onclick="nextQuestion(10,true)">الأكسجين</button></li>
+        <li><button onclick="nextQuestion(10,false)">النيتروجين</button></li>
+      </ul>
+    </div>
+
+    <div class="quiz-card" id="q11">
+      <h3>ما هو العظم الأطول في جسم الإنسان؟</h3>
+      <ul>
+        <li><button onclick="nextQuestion(11,true)">عظم الفخذ</button></li>
+        <li><button onclick="nextQuestion(11,false)">عظم الساق</button></li>
+        <li><button onclick="nextQuestion(11,false)">عظم العضد</button></li>
+      </ul>
+    </div>
+
+    <div class="quiz-card" id="result">
+      <h3>🎉 النتيجة</h3>
+      <p id="quiz-score"></p>
+      <button onclick="restartQuiz()">🔄 إعادة المحاولة</button>
+    </div>
+  </div>
+
+  <!-- 🟣 الغطاء الرمادي -->
+  <div class="quiz-overlay" id="quiz-overlay">
+    <button class="start-btn" onclick="startQuiz()">▶️ ابدأ الاختبار</button>
+  </div>
+</section>
+
+<style>
+/* 🎨 تصميم الكويز */
+.quiz-section {
+  background: linear-gradient(135deg, #4B0082, #000);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.quiz-container {
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  color: #333;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+  animation: fadeIn 1s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.quiz-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #4B0082;
+  margin-bottom: 10px;
+}
+
+.quiz-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.quiz-timer {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #d9534f;
+  margin-bottom: 20px;
+}
+
+/* 📊 شريط التقدم */
+.progress-container {
+  width: 100%;
+  height: 20px;
+  background: #eee;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #4B0082, #6a0dad, #9b30ff);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  transition: width 0.5s ease;
+}
+
+.quiz-card { display: none; }
+.quiz-card.active { display: block; animation: slideUp 0.7s ease; }
+
+.quiz-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.quiz-card ul { list-style: none; padding: 0; }
+.quiz-card li { margin: 10px 0; }
+
+.quiz-card button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: #4B0082;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.quiz-card button:hover {
+  background: #6a0dad;
+  transform: scale(1.05);
+}
+
+#result h3 { font-size: 1.8rem; color: #4B0082; }
+#result p { font-size: 1.2rem; margin: 15px 0; font-weight: bold; }
+
+/* 🟣 الغطاء الرمادي */
+.quiz-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.start-btn {
+  background: #fff;
+  color: #4B0082;
+  border: none;
+  font-size: 2rem;
+  padding: 20px 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+
+.start-btn:hover {
+  background: #4B0082;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+@keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+@keyframes slideUp { from {transform: translateY(20px); opacity: 0;} to {transform: translateY(0); opacity: 1;} }
+</style>
+
+<script>
+let score = 0;
+let timer = 60;
+let interval;
+let totalQuestions = 11;
+
+function startQuiz() {
+  document.getElementById("quiz-overlay").style.display = "none";
+  startTimer();
+  updateProgress(0);
+}
+
+function startTimer() {
+  interval = setInterval(() => {
+    timer--;
+    document.getElementById("quiz-timer").innerText = `⏳ ${timer} ثانية`;
+    if (timer <= 0) {
+      clearInterval(interval);
+      showResult();
+    }
+  }, 1000);
+}
+
+function updateProgress(current) {
+  let progress = (current / totalQuestions) * 100;
+  document.getElementById("progress-bar").style.width = progress + "%";
+  document.getElementById("progress-bar").innerText = `${current}/${totalQuestions}`;
+}
+
+function nextQuestion(q, correct) {
+  if (correct) score++;
+  document.getElementById("q"+q).classList.remove("active");
+  if (document.getElementById("q"+(q+1))) {
+    document.getElementById("q"+(q+1)).classList.add("active");
+    updateProgress(q);
+  } else {
+    updateProgress(totalQuestions);
+    showResult();
+  }
+}
+
+function showResult() {
+  document.querySelectorAll(".quiz-card").forEach(c => c.classList.remove("active"));
+  document.getElementById("result").classList.add("active");
+  document.getElementById("quiz-score").innerText = `أجبت بشكل صحيح على ${score} من ${totalQuestions} أسئلة ✅`;
+}
+
+function restartQuiz() {
+  score = 0;
+  timer = 60;
+  document.getElementById("result").classList.remove("active");
+  document.getElementById("q1").classList.add("active");
+  document.getElementById("quiz-timer").innerText = "⏳ 60 ثانية";
+  document.getElementById("progress-bar").style.width = "0%";
+  document.getElementById("progress-bar").innerText = "0%";
+  clearInterval(interval);
+  document.getElementById("quiz-overlay").style.display = "flex";
+}
+</script>
+ 
+
+<footer id="contact">
+  <p>📩 تواصل معنا:</p>
+  <p>
+    <a href="https://www.facebook.com/share/1CEg7nhGao/">Facebook</a> |
+    <a href="https://www.instagram.com/mednova_club?igsh=b29yamk4MmNhNnJs">Instagram</a> |
+    <a href="mednova@gmail.com">Email</a>
+  </p>
+  <p>© 2025 Med Nova Club</p>
+</foote>
+
+
+</body>
+</html>
+
