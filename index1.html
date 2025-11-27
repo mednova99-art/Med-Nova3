@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>MedNova Magazine</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Cairo", sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #7a1a74, #53014f, #2b001f);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* زر اللغة */
+    .lang-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: white;
+      padding: 8px 18px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 700;
+      z-index: 999;
+    }
+
+    /* الجزيئات */
+    .particles {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .particles span {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: radial-gradient(circle, #ff4fd8, transparent 70%);
+      border-radius: 50%;
+      animation: float 7s linear infinite;
+      opacity: .7;
+    }
+
+    .particles span:nth-child(1) { left: 10%; animation-delay: 0s; }
+    .particles span:nth-child(2) { left: 30%; animation-delay: 2s; }
+    .particles span:nth-child(3) { left: 50%; animation-delay: 4s; }
+    .particles span:nth-child(4) { left: 70%; animation-delay: 1s; }
+    .particles span:nth-child(5) { left: 90%; animation-delay: 3s; }
+
+    @keyframes float {
+      from { transform: translateY(110vh) scale(.3); opacity: 0; }
+      30% { opacity: .8; }
+      to { transform: translateY(-10vh) scale(1); opacity: 0; }
+    }
+
+    .hero {
+      min-height: 100vh;
+      background:
+        linear-gradient(rgba(83,1,79,.92), rgba(83,1,79,.92)),
+        url("hero.jpg") center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+      position: relative;
+      z-index: 5;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      margin-bottom: 28px;
+    }
+
+    .brand img {
+      width: 85px;
+      filter: drop-shadow(0 0 8px rgba(255,80,220,.6));
+      animation: glow 2.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        filter: drop-shadow(0 0 6px rgba(255,80,220,.5));
+      }
+      to {
+        filter: drop-shadow(0 0 16px rgba(255,80,220,.9));
+      }
+    }
+
+    .brand h1 {
+      font-size: 2.9rem;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 620px;
+      opacity: .9;
+      margin-bottom: 65px;
+      line-height: 1.9;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 38px;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.10);
+      border-radius: 24px;
+      padding: 22px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.45);
+      backdrop-filter: blur(12px);
+      text-align: center;
+      animation: cardEnter 1s ease forwards;
+      opacity: 0;
+      transition: 0.4s;
+    }
+
+    .card:nth-child(1) { animation-delay: .6s; }
+    .card:nth-child(2) { animation-delay: 1s; }
+
+    @keyframes cardEnter {
+      from {transform: translateY(45px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+
+    .card img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      border-radius: 18px;
+      margin-bottom: 18px;
+    }
+
+    .card h2 {
+      font-size: 1.45rem;
+      margin-bottom: 18px;
+    }
+
+    .card a {
+      display: inline-block;
+      text-decoration: none;
+      background: linear-gradient(135deg, #ff2bbf, #7a1a74);
+      color: white;
+      padding: 13px 36px;
+      border-radius: 32px;
+      font-weight: 700;
+      transition: .3s;
+      box-shadow:
+        0 0 12px rgba(255,80,220,.6),
+        0 6px 20px rgba(0,0,0,.45);
+    }
+
+    .card a:hover {
+      transform: scale(1.15);
+    }
+
+    footer {
+      margin-top: 55px;
+      opacity: .85;
+      font-size: .95rem;
+    }
+
+    @media (max-width: 600px) {
+      .brand h1 { font-size: 2rem; }
+      .brand img { width: 60px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<button class="lang-btn" onclick="toggleLang()">EN</button>
+
+<div class="particles">
+  <span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<section class="hero">
+
+  <div class="brand">
+    <img src="mm.png">
+    <h1 id="siteTitle">مجلة MedNova</h1>
+  </div>
+
+  <p id="subtitle">بوابتك نحو الابتكار والمعرفة في العلوم الطبية</p>
+
+  <div class="cards">
+
+    <div class="card">
+      <img src="old.jpg">
+      <h2 id="oldTitle">مجلة الإصدار 1.0
+      </h2>
+      <a id="oldBtn" href="index2.html">دخول</a>
+    </div>
+
+    <div class="card">
+      <img src="new.jpg.jpg">
+      <h2 id="newTitle">مجلة الإصدار 2.0
+      </h2>
+      <a id="newBtn" href="https://online.fliphtml5.com/mednova/kdfd/" target="_blank">دخول</a>
+    </div>
+
+  </div>
+
+  <footer id="footer">© جميع الحقوق محفوظة | MedNova Magazine</footer>
+
+</section>
+
+<script>
+  let currentLang = "ar";
+
+  function toggleLang() {
+    if (currentLang === "ar") {
+      document.documentElement.dir = "ltr";
+      siteTitle.innerText = "MedNova Magazine";
+      subtitle.innerText = "Your gateway to innovation and medical knowledge";
+      oldTitle.innerText = " Edition 1.0";
+      newTitle.innerText = " Edition 2.0";
+      oldBtn.innerText = "Enter";
+      newBtn.innerText = "Enter";
+      footer.innerText = "© All rights reserved | MedNova Magazine";
+      document.querySelector(".lang-btn").innerText = "AR";
+      currentLang = "en";
+    } else {
+      document.documentElement.dir = "rtl";
+      siteTitle.innerText = "مجلة MedNova";
+      subtitle.innerText = "بوابتك نحو الابتكار والمعرفة في العلوم الطبية";
+      oldTitle.innerText = "مجلة الاصدار 1.0";
+      newTitle.innerText = "مجلة الاصدار 2.0";
+      oldBtn.innerText = "دخول";
+      newBtn.innerText = "دخول";
+      footer.innerText = "© جميع الحقوق محفوظة | MedNova Magazine";
+      document.querySelector(".lang-btn").innerText = "EN";
+      currentLang = "ar";
+    }
+  }
+</script>
+
+</body>
+</html>
